@@ -6,7 +6,7 @@
 /*   By: ide-vill <ide-vill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/09/05 19:49:57 by ide-vill          #+#    #+#             */
-/*   Updated: 2015/09/05 19:50:00 by ide-vill         ###   ########.fr       */
+/*   Updated: 2015/09/06 11:25:24 by ide-vill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static int		ft_count(int n)
 	return (j + 1);
 }
 
-char		*ft_strcpy(char *dst, const char *src)
+char			*ft_strcpy(char *dst, const char *src)
 {
-	int		i;
+	int			i;
 
 	i = 0;
 	if (!dst && !src)
