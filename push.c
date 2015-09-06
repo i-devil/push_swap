@@ -34,7 +34,7 @@ void	push_a(t_env *env, t_flags *flag)
 		i++;
 	}
 	env->count += 1;
-	ft_putstr("pa ");
+	ft_putstr("\033[32mpa \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
@@ -61,7 +61,7 @@ void	push_b(t_env *env, t_flags *flag)
 		i++;
 	}
 	env->count += 1;
-	ft_putstr("pb ");
+	ft_putstr("\033[32mpb \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }

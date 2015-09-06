@@ -14,9 +14,9 @@
 
 void		total_operations(int t)
 {
-	ft_putstr("Total: ");
+	ft_putstr("\033[31mTotal: ");
 	ft_putnbr(t);
-	ft_putstr(" actions\n");
+	ft_putstr(" actions\033[37m\n");
 }
 
 void		print_stack(int *stack, char c, int len)

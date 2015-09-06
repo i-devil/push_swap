@@ -28,7 +28,7 @@ void	rotate_a(t_env *env, t_flags *flag)
 	}
 	env->stack_a[env->len_a - 1] = tmp;
 	env->count += 1;
-	ft_putstr("ra ");
+	ft_putstr("\033[36mra \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
@@ -49,7 +49,7 @@ void	rotate_b(t_env *env, t_flags *flag)
 	}
 	env->stack_b[env->len_b - 1] = tmp;
 	env->count += 1;
-	ft_putstr("rb ");
+	ft_putstr("\033[36mrb \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
@@ -59,7 +59,7 @@ void	rotate_r(t_env *env, t_flags *flag)
 	rotate_a(env, flag);
 	rotate_b(env, flag);
 	env->count -= 1;
-	ft_putstr("rr ");
+	ft_putstr("\033[36mrr \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }

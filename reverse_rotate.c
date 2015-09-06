@@ -28,7 +28,7 @@ void	reverse_rotate_a(t_env *env, t_flags *flag)
 	}
 	env->stack_a[0] = tmp;
 	env->count += 1;
-	ft_putstr("rra ");
+	ft_putstr("\033[35mrra \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
@@ -49,7 +49,7 @@ void	reverse_rotate_b(t_env *env, t_flags *flag)
 	}
 	env->stack_b[0] = tmp;
 	env->count += 1;
-	ft_putstr("rrb ");
+	ft_putstr("\033[35mrrb \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
@@ -59,7 +59,7 @@ void	reverse_rotate_r(t_env *env, t_flags *flag)
 	reverse_rotate_a(env, flag);
 	reverse_rotate_b(env, flag);
 	env->count -= 1;
-	ft_putstr("rrr ");
+	ft_putstr("\033[35mrrr \033[37m");
 	if (flag->v == 1)
 		stack_status(env);
 }
