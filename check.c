@@ -32,6 +32,8 @@ void		check_params(t_flags *flag, char **argv)
 				flag->t = 5;
 				flag->d = 1;
 			}
+			else if(argv[1][i] >= '0'&& argv[1][i] <= '9')
+				;
 			else
 				ft_puterror("Error\n");
 			i++;
@@ -90,18 +92,22 @@ void		check_swaps(t_env *env, t_flags *flag)
 	int		len;
 
 	len = env->len_a;
-	if (len == 3)
-	{
+	// if (len == 3)
+	// {
 		if (env->stack_a[0] > env->stack_a[1])
 			swap_a(env, flag);
 		while (env->stack_a[0] > env->stack_a[len - 1])
 			reverse_rotate_a(env, flag);
-	}
+	// }
 	if (env->stack_a[len - 2] > env->stack_a[len - 1])
 	{
 		while (env->stack_a[len - 2] > env->stack_a[len - 1])
 		{
 			reverse_rotate_a(env, flag);
+			reverse_rotate_a(env, flag);
+			swap_a(env, flag);
+			rotate_a(env, flag);
+			rotate_a(env, flag);
 		}
 	}
 }

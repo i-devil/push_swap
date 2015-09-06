@@ -26,9 +26,9 @@ typedef struct		s_list
 
 typedef struct		s_flags
 {
+	int				d;
 	int				v;
 	int				t;
-	int				d;
 }					t_flags;
 
 typedef struct		s_env
